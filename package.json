@@ -1,0 +1,25 @@
+{
+  "name": "eat_da_burger",
+  "version": "1.0.0",
+  "description": "Eat Da Burger",
+  "main": "server.js",
+  "dependencies": {
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rehamilton/eat_da_burger.git"
+  },
+  "author": "Roz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rehamilton/eat_da_burger/issues"
+  },
+  "homepage": "https://github.com/rehamilton/eat_da_burger#readme"
+}
