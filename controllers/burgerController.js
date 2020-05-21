@@ -7,7 +7,7 @@ const burger = require("../models/burger.js")
 
 //get (/)
 router.get("/", function(req, res) {
-    burger.all(function(data) {
+    burger.read(function(data) {
       const burgerlist = {
         burger: data
       };
@@ -59,3 +59,5 @@ router.delete("/api/burgers/:id", function(req, res) {
       }
     });
 });
+
+module.exports = router

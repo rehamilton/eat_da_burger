@@ -1,4 +1,4 @@
-const orm = require("../config/orm ")
+const orm = require("../config/orm.js")
 
 const burger = {
     read: db => {
@@ -23,4 +23,4 @@ const burger = {
     }
 }
 
-mudule.exports = burger;
+module.exports = burger;
