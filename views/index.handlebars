@@ -1,6 +1,6 @@
-<SECTION>
+<div class="container text-white">
     <div class = "row">
-        <div class = "column">
+        <div class = "col-md not-eaten">
 
             <h2>Burgers you want to eat!</h2>
 
@@ -13,7 +13,9 @@
             </ul>
 
         </div>
-        <div class = "column">
+        
+        
+        <div class = "col-md eaten">
 
             <h2>Burgers you've eaten!</h2>
 
@@ -28,24 +30,18 @@
         </div>
     </div>
 
-    <div class = "row">
+    <div class="row justify-content-center">
+        <form class="burger-form text-center">
 
-        <h2>Add a Burger</h2>
-        <form class="burger-form">
+            <h2>Add a Burger</h2>
 
         <div class="form-group">
             <label for="bu">Burger Name:</label>
             <input type="text" id="bu" name="burger">
         </div>
 
-        <div class="form-group">
-            <label for="eaten">Eaten?</label><br>
-            <input type="radio" name="eaten" value="1" checked> Eaten!<br>
-            <input type="radio" name="eaten" value="0"> Not Eaten
-        </div>
-
         <button type="submit">Add Burger</button>
         </form>
 
     </div>
-</SECTION>
+</div>

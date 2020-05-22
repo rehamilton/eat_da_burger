@@ -1,23 +1,23 @@
 const orm = require("../config/orm.js")
 
 const burger = {
-    read: db => {
-        orm.all("burgers", function(res) {
+    read: cb => {
+        orm.read("burgers", res => {
             cb(res)
         })
     },
-    create: function(cols, vals, cb) {
-        orm.create("burgers", cols, vals, function(res) {
+    create: (cols, vals, cb) => {
+        orm.create("burgers", cols, vals, res => {
             cb(res)
         })
     },
-    update: function(objColVals, condition, cb) {
-        orm.delete("burgers", condition, function(res) {
+    update: (objColVals, condition, cb) => {
+        orm.update("burgers", objColVals, condition, res => {
             cb(res)
         })
     },
-    delete: function (condition, cb) {
-        orm.delete("burgers", condition, function(res) {
+    delete: (condition, cb) => {
+        orm.delete("burgers", condition, res => {
             cb(res)
         })
     }

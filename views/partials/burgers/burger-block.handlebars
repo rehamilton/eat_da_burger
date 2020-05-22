@@ -1,9 +1,12 @@
 <li>
-	{{burger}}
+	<div class="col-md">{{burger}}</div>
 
-	<button class="change-state" data-id="{{id}}" data-newState="{{eaten}}">
-		{{#if eaten}}EAT DA BURGER!{{else}}RE-ORDER DA BURGER!{{/if}}
-	</button>
+	<div class="col-md">
+		<button class="change-state" data-id="{{id}}" data-newstate="{{eaten}}">
+		{{#if eaten}} EAT DA BURGER! {{else}} RE-ORDER! {{/if}}
+		</button>
 
-	<button class="delete-burger" data-id="{{this.id}}">PURGE!</button>
+		<button class="delete-burger" data-id="{{this.id}}"> THROW OUT! </button>
+
+	</div>
 </li>
