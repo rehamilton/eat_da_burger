@@ -1,6 +1,7 @@
 // Object for all our SQL statement functions goes here
 const connection = require("./connections.js")
 
+//populate connection query with question marks to secure against SQL injections
 function questionMarks(num) {
     let arr = [];
 
@@ -11,7 +12,7 @@ function questionMarks(num) {
   return arr.toString();
 }
 
-
+//create strings which can be entered into SQL connection queries
 function objToSql(object) {
     let arr = [];
   
@@ -34,6 +35,7 @@ function objToSql(object) {
 
 
 const orm = {
+    //READ - used when initiating main page
     read: (tableInput, cb) => {
         let queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, (err, result) => {
@@ -43,6 +45,7 @@ const orm = {
           cb(result);
         });
       },
+    //CREATE - used in burger form to add new burgers (INSERT INTO ?table Name? (?columns?) VALUES (?user entry?))
     create: (table, cols, vals, cb) => {
         let queryString = "INSERT INTO " + table
 
@@ -66,7 +69,7 @@ const orm = {
             cb(result)
         })
     },
-
+    //UPDATE - used when user clicks on buttons (UPDATE ?table? SET ?column name = newstate? WHERE (?id = button clicked?))
     update: (table, objColVals, condition, cb) => {
         var queryString = "UPDATE " + table;
     
@@ -84,6 +87,7 @@ const orm = {
           cb(result);
         });
     },
+    //DELETE - used when deleting a burger (DELETE FROM ?table? WHERE (?id = button clicked?))
     delete: (table, condition, cb) => {
         let queryString = "DELETE FROM " + table
         queryString += " WHERE "
